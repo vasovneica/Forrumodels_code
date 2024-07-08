@@ -1,14 +1,14 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAuth, fetchRegister, selectIsAuth } from '../../redux/slices/auth';
+import { Navigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
-import { useDispatch, useSelector } from 'react-redux';
 import styles from './Login.module.scss';
-import { fetchAuth, fetchRegister, selectIsAuth } from '../../redux/slices/auth';
-import { Navigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
 
 
 export const Registration = () => {
