@@ -1,4 +1,9 @@
 import React from 'react';
+import { UserInfo } from '../UserInfo';
+import { PostSkeleton } from './Skeleton';
+import { useDispatch } from 'react-redux';
+import { fetchDeletePost } from '../../redux/slices/posts';
+import { Link, Navigate } from "react-router-dom";
 import clsx from 'clsx';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Clear';
@@ -6,12 +11,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import DownloadIcon from '@mui/icons-material/DownloadForOfflineOutlined';
 import CommentIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ViewIcon from '@mui/icons-material/VisibilityOutlined';
-import { Link, Navigate } from "react-router-dom";
 import styles from './Post.module.scss';
-import { UserInfo } from '../UserInfo';
-import { PostSkeleton } from './Skeleton';
-import { useDispatch } from 'react-redux';
-import { fetchDeletePost } from '../../redux/slices/posts';
+
 
 
 export const Post = ({
