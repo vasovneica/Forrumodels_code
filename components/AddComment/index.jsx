@@ -1,12 +1,13 @@
 import React from "react";
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../../redux/slices/auth';
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./AddComment.module.scss";
 import axios from '../../axios.js';
 import TextField from "@mui/material/TextField";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import { useNavigate, useParams } from "react-router-dom";
+
 
 
 export const Index = ({ id }) => {
