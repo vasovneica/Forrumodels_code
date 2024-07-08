@@ -1,14 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectIsAuth } from '../../redux/slices/auth';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import SimpleMDE from 'react-simplemde-editor';
-import { useForm } from 'react-hook-form';
 import 'easymde/dist/easymde.min.css';
 import styles from './AddPost.module.scss';
-import { useSelector } from 'react-redux';
-import { selectIsAuth } from '../../redux/slices/auth';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+
 import axios from '../../axios.js';
 
 export const AddPost = () => {
